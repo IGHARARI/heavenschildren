@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>UnimportantInfo</groupId>
 
-    <artifactId>TheTodo</artifactId>
+    <artifactId>TheHeavensChild</artifactId>
     <version>0.0.1</version>
-    <name>The Todo</name>
-    <description>TODO: Change this description</description>
+    <name>The Heavens Child</name>
+    <description>Sick ass mod yo</description>
     <!-- Change the above for mod information. -->
 
     <properties>
@@ -14,7 +14,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <SlayTheSpire.version>12-22-2020</SlayTheSpire.version>
         <ModTheSpire.version>3.18.2</ModTheSpire.version>
-        <ModID>todomod</ModID>
+        <ModID>HeavensChild</ModID>
 
         <!--CHANGE THIS TO YOUR STEAM INSTALLATION-->
         <Steam.path>C:/Program Files (x86)/Steam/steamapps/</Steam.path>

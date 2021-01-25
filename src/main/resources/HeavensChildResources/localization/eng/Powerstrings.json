@@ -1,0 +1,14 @@
+{
+  "${ModID}:HeavyLifting": {
+    "NAME": "Heavy Lifting",
+    "DESCRIPTIONS": ["Next turn gain #b", " Strength for every #bAttack played this turn. ", "#bAttacks played: "]
+  },
+  "${ModID}:Overstrain": {
+    "NAME": "Overstrain",
+    "DESCRIPTIONS": ["The next #bAttack you play deals half damage."]
+  },
+  "${ModID}:Arrangements": {
+    "NAME": "Arrangements",
+    "DESCRIPTIONS": ["Next turn play: "]
+  }
+}
