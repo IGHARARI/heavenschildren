@@ -6,17 +6,17 @@ import theHeavensChild.cards.AbstractEasyCard;
 
 import static theHeavensChild.HeavensChildMod.makeID;
 
-public class SillyVariable extends DynamicVariable {
+public class M2Variable extends DynamicVariable {
 
     @Override
     public String key() {
-        return makeID("si");
+        return makeID("M2");
     }
 
     @Override
     public boolean isModified(AbstractCard card) {
         if (card instanceof AbstractEasyCard) {
-            return ((AbstractEasyCard) card).isSillyModified;
+            return ((AbstractEasyCard) card).isM2Modified;
         }
         return false;
     }
@@ -24,21 +24,21 @@ public class SillyVariable extends DynamicVariable {
     @Override
     public int value(AbstractCard card) {
         if (card instanceof AbstractEasyCard) {
-            return ((AbstractEasyCard) card).silly;
+            return ((AbstractEasyCard) card).m2;
         }
         return -1;
     }
 
     public void setIsModified(AbstractCard card, boolean v) {
         if (card instanceof AbstractEasyCard) {
-            ((AbstractEasyCard) card).isSillyModified = v;
+            ((AbstractEasyCard) card).isM2Modified = v;
         }
     }
 
     @Override
     public int baseValue(AbstractCard card) {
         if (card instanceof AbstractEasyCard) {
-            return ((AbstractEasyCard) card).baseSilly;
+            return ((AbstractEasyCard) card).baseM2;
         }
         return -1;
     }
@@ -46,7 +46,7 @@ public class SillyVariable extends DynamicVariable {
     @Override
     public boolean upgraded(AbstractCard card) {
         if (card instanceof AbstractEasyCard) {
-            return ((AbstractEasyCard) card).upgradedSilly;
+            return ((AbstractEasyCard) card).upgradedM2;
         }
         return false;
     }

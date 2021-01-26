@@ -22,18 +22,18 @@ public class EasyModalChoiceDemo extends AbstractEasyCard {
     public EasyModalChoiceDemo() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
-        baseSilly = silly = 1;
+        baseM2 = m2 = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> easyCardList = new ArrayList<>();
         easyCardList.add(new EasyModalChoiceCard("Draw", "Draw " + magicNumber + " cards.", () -> Wiz.addToTop(new DrawCardAction(magicNumber))));
-        easyCardList.add(new EasyModalChoiceCard("Strength", "Gain " + silly + " Strength.", () -> applyToSelfTop(new StrengthPower(p, silly))));
+        easyCardList.add(new EasyModalChoiceCard("Strength", "Gain " + m2 + " Strength.", () -> applyToSelfTop(new StrengthPower(p, m2))));
         Wiz.addToBot(new EasyModalChoiceAction(easyCardList));
     }
 
     public void upgradeVariables() {
         upgradeMagicNumber(1);
-        upgradeSilly(1);
+        upgradeM2(1);
     }
 }

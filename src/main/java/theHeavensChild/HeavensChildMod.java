@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theHeavensChild.cards.AbstractEasyCard;
 import theHeavensChild.cards.cardvars.SecondDamage;
-import theHeavensChild.cards.cardvars.SillyVariable;
+import theHeavensChild.cards.cardvars.M2Variable;
 import theHeavensChild.relics.AbstractEasyRelic;
 
 import java.nio.charset.StandardCharsets;
@@ -124,7 +124,7 @@ public class HeavensChildMod implements
 
     @Override
     public void receiveEditCards() {
-        BaseMod.addDynamicVariable(new SillyVariable());
+        BaseMod.addDynamicVariable(new M2Variable());
         BaseMod.addDynamicVariable(new SecondDamage());
         new AutoAdd(modID)
                 .packageFilter(AbstractEasyCard.class)

@@ -10,5 +10,9 @@
   "${ModID}:Arrangements": {
     "NAME": "Arrangements",
     "DESCRIPTIONS": ["Next turn play: "]
+  },
+  "${ModID}:NextTurnDiscard": {
+    "NAME": "Discard",
+    "DESCRIPTIONS": ["Discard #b", " card", " cards", " next turn."]
   }
 }

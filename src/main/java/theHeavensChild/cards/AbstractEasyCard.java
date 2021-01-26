@@ -28,10 +28,10 @@ public abstract class AbstractEasyCard extends CustomCard {
 
     protected final CardStrings cardStrings;
 
-    public int silly;
-    public int baseSilly;
-    public boolean upgradedSilly;
-    public boolean isSillyModified;
+    public int m2;
+    public int baseM2;
+    public boolean upgradedM2;
+    public boolean isM2Modified;
 
     public int secondDamage;
     public int baseSecondDamage;
@@ -131,17 +131,17 @@ public abstract class AbstractEasyCard extends CustomCard {
 
     public void resetAttributes() {
         super.resetAttributes();
-        silly = baseSilly;
-        isSillyModified = false;
+        m2 = baseM2;
+        isM2Modified = false;
         secondDamage = baseSecondDamage;
         isSecondDamageModified = false;
     }
 
     public void displayUpgrades() {
         super.displayUpgrades();
-        if (upgradedSilly) {
-            silly = baseSilly;
-            isSillyModified = true;
+        if (upgradedM2) {
+            m2 = baseM2;
+            isM2Modified = true;
         }
         if (upgradedSecondDamage) {
             secondDamage = baseSecondDamage;
@@ -149,10 +149,10 @@ public abstract class AbstractEasyCard extends CustomCard {
         }
     }
 
-    protected void upgradeSilly(int amount) {
-        baseSilly += amount;
-        silly = baseSilly;
-        upgradedSilly = true;
+    protected void upgradeM2(int amount) {
+        baseM2 += amount;
+        m2 = baseM2;
+        upgradedM2 = true;
     }
 
     protected void upgradeSecondDamage(int amount) {

@@ -39,7 +39,7 @@
   },
   "${ModID}:EasyModalChoiceDemo": {
     "NAME": "Easy Modal Choice",
-    "DESCRIPTION": "Choose 1: Draw !M! cards or gain !HeavensChild:si! Strength."
+    "DESCRIPTION": "Choose 1: Draw !M! cards or gain !HeavensChild:M2! Strength."
   },
   "${ModID}:OverheadSmash": {
     "NAME": "Overhead Smash",
@@ -47,13 +47,7 @@
   },
   "${ModID}:PullThrough": {
     "NAME": "Pull Through",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn discard !M! card.",
-    "EXTENDED_DESCRIPTION": [
-      "Next Turn Discard",
-      "At the start of your next turn, discard ",
-      " card.",
-      " cards."
-    ]
+    "DESCRIPTION": "Gain !B! Block. NL Next turn discard !M! card."
   },
   "${ModID}:Counterbalance": {
     "NAME": "Counterbalance",
@@ -95,5 +89,25 @@
   "${ModID}:WideSlash": {
     "NAME": "Wide Slash",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Exhaust a card in your discard pile."
+  },
+  "${ModID}:GracefulFlip": {
+    "NAME": "Graceful Flip",
+    "DESCRIPTION": "Draw !M! cards. NL Decrease the cards drawn by this card by 1 this combat."
+  },
+  "${ModID}:SurpriseAttack": {
+    "NAME": "Surprise Attack",
+    "DESCRIPTION": "Deal !D! damage. NL If you discarded a card this turn, deal !HeavensChild:D2! damage instead."
+  },
+  "${ModID}:ThreateningRoar": {
+    "NAME": "Threatening Roar",
+    "DESCRIPTION": "Draw !M! cards. NL For each Attack drawn, apply 1 Vulnerable to ALL enemies. NL Exhaust."
+  },
+  "${ModID}:IntimidatingShout": {
+    "NAME": "Intimidating Shout",
+    "DESCRIPTION": "Draw !M! cards. NL For each Skill drawn, apply 1 Weak to ALL enemies. NL Exhaust."
+  },
+  "${ModID}:Tumble": {
+    "NAME": "Tumble",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! additional cards and discard !HeavensChild:M2! card."
   }
 }
