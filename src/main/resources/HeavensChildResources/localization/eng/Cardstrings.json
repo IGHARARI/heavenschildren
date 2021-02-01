@@ -109,5 +109,43 @@
   "${ModID}:Tumble": {
     "NAME": "Tumble",
     "DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! additional cards and discard !HeavensChild:M2! card."
+  },
+  "${ModID}:GracefulLanding": {
+    "NAME": "Graceful Landing",
+    "DESCRIPTION": "Gain !B! Block. NL Master: Receive no attack damage last turn."
+  },
+  "${ModID}:TacticalToxin": {
+    "NAME": "Tactical Toxin",
+    "DESCRIPTION": "Apply !M! Poison. NL Draw !HeavensChild:M2! card."
+  },
+  "${ModID}:SleightOfHand": {
+    "NAME": "Sleight Of Hand",
+    "DESCRIPTION": "Unplayable. NL Whenever this card is drawn, discard it. NL When you discard this card, deal !M! damage to a random enemy."
+  },
+  "${ModID}:FullBodyTackle": {
+    "NAME": "Full-Body Tackle",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Next turn, discard !HeavensChild:M2! cards."
+  },
+  "${ModID}:VenomBlade": {
+    "NAME": "Venom Blade",
+    "DESCRIPTION": "Deal !D! damage. NL Apply Poison equal to half of the damage dealt."
+  },
+  "${ModID}:MasterPlan": {
+    "NAME": "Master Plan",
+    "DESCRIPTION": "Unplayable. NL If you discard this card from your hand, choose a Skill in your discard pile and play it.",
+    "UPGRADE_DESCRIPTION": "Draw !M! card. NL If you discard this card from your hand, choose a Skill in your discard pile and play it.",
+    "EXTENDED_DESCRIPTION": ["Select a Skill to play."]
+  },
+  "${ModID}:SneakAttack": {
+    "NAME": "Sneak Attack",
+    "DESCRIPTION": "Unplayable. NL If you discard this card from your hand, choose an Attack in your discard pile and play it.",
+    "UPGRADE_DESCRIPTION": "Draw !M! card. NL If you discard this card from your hand, choose an Attack in your discard pile and play it.",
+    "EXTENDED_DESCRIPTION": ["Select an Attack to play."]
+  },
+  "${ModID}:IgniteSpirit": {
+    "NAME": "Ignite Spirit",
+    "DESCRIPTION": "Exhaust a card in your discard pile. NL Gain Strength equal to its cost.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card in your discard pile. NL Gain Strength equal to its cost +1.",
+    "EXTENDED_DESCRIPTION": ["Select a card to Exhaust."]
   }
 }

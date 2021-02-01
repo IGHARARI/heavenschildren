@@ -162,6 +162,10 @@ public class Wiz {
         addToBot(new ApplyPowerAction(m, AbstractDungeon.player, po, po.amount));
     }
 
+    public static void applyToEnemy(AbstractMonster m, AbstractPower po, AbstractGameAction.AttackEffect effect) {
+        addToBot(new ApplyPowerAction(m, AbstractDungeon.player, po, po.amount, effect));
+    }
+
     public static void applyToEnemyTop(AbstractMonster m, AbstractPower po) {
         addToTop(new ApplyPowerAction(m, AbstractDungeon.player, po, po.amount));
     }

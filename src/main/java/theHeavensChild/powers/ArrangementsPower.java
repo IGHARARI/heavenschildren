@@ -63,23 +63,18 @@ public class ArrangementsPower extends AbstractEasyPower {
         AbstractPlayer p = AbstractDungeon.player;
         if (p.drawPile.contains(c)) {
             p.drawPile.group.remove(c);
-            System.out.println("Card was in drawpile");
 
         } else if (p.discardPile.contains(c)) {
             p.discardPile.group.remove(c);
-            System.out.println("Card was in discardPile");
 
         } else if (p.hand.contains(c)) {
             p.hand.group.remove(c);
-            System.out.println("Card was in hand");
 
         } else if (p.limbo.contains(c)) {
             p.limbo.group.remove(c);
-            System.out.println("Card was in limbo");
 
         } else if (p.exhaustPile.contains(c)) {
             p.exhaustPile.group.remove(c);
-            System.out.println("Card was in exhaustPile");
         } else {
             System.out.println("Card was NOWHERE WHAT THE FUCK");
         }
