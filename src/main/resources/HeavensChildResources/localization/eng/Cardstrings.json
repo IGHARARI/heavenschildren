@@ -204,5 +204,9 @@
   "${ModID}:TemperedBody": {
     "NAME": "Tempered Body",
     "DESCRIPTION": "Gain !B! Block."
+  },
+  "${ModID}:FollowUpSwing": {
+    "NAME": "Follow-Up Swing",
+    "DESCRIPTION": "Deal !D! Damage. NL heavenschild:Master: NL Play an skill this turn."
   }
 }
