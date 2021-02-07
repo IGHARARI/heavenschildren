@@ -26,7 +26,7 @@ public class Fortify extends AbstractMasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int storeEnergy = EnergyPanel.totalCount;
+        gainBlock();
         addToBot(new EasyXCostAction(this, (effect, params) -> {
             addToBot(new ApplyPowerAction(p, p, new FortifyPower(params[0], effect)));
             return true;
