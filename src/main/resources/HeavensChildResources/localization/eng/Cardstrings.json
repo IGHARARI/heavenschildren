@@ -151,5 +151,9 @@
   "${ModID}:PerfectGuard": {
     "NAME": "Perfect Guard",
     "DESCRIPTION": "Gain !B! Block. Gains 1 additional Block for ALL your Skills."
+  },
+  "${ModID}:QuickStep": {
+    "NAME": "Quick Step",
+    "DESCRIPTION": "Draw !M! cards. NL For each *Skill drawn this way, gain !${ModID}:M2! Dexterity. NL Exhaust"
   }
 }
