@@ -20,14 +20,13 @@ public class BladeHurricaneAction extends AbstractGameAction {
     public static final String[] TEXT = uiStrings.TEXT;
     private static final float DURATION = Settings.ACTION_DUR_XFAST;
     private AbstractPlayer p;
-    private AbstractCard c;
+    private AbstractCard paired;
 
     public BladeHurricaneAction(AbstractCard pair) {
         p = AbstractDungeon.player;
-        this.amount = amount;
         this.actionType = AbstractGameAction.ActionType.DISCARD;
         this.duration = DURATION;
-        c = pair;
+        paired = pair;
     }
 
     public void update() {
@@ -37,7 +36,7 @@ public class BladeHurricaneAction extends AbstractGameAction {
                 this.isDone = true;
                 return;
             }
-            if (this.amount > 0) {
+            if (p.hand.size() > 0) {
                 AbstractDungeon.handCardSelectScreen.open(TEXT[0], p.hand.size(), true, true);
                 tickDuration();
                 return;
@@ -49,7 +48,17 @@ public class BladeHurricaneAction extends AbstractGameAction {
                 this.p.hand.moveToDiscardPile(c);
                 c.triggerOnManualDiscard();
                 GameActionManager.incrementDiscard(false);
-                addToTop(new AttackDamageRandomEnemyAction(c, AttackEffect.NONE));
+                addToTop(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        target = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
+                        if(target != null) {
+                            paired.calculateCardDamage((AbstractMonster) target);
+                            addToTop(new DamageAction(target, new DamageInfo(AbstractDungeon.player, paired.damage, paired.damageTypeForTurn), AttackEffect.FIRE));
+                        }
+                        this.isDone = true;
+                    }
+                });
             }
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
         }
