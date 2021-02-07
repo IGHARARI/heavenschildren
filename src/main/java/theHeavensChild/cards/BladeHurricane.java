@@ -14,8 +14,8 @@ import static theHeavensChild.HeavensChildMod.makeID;
 public class BladeHurricane extends AbstractEasyCard {
     public final static String ID = makeID(BladeHurricane.class.getSimpleName());
 
-    private final int DAMAGE = 7;
-    private final int UPG_DAMAGE = 2;
+    private final int DAMAGE = 4;
+    private final int UPG_DAMAGE = 3;
     private static final int DRAW = 5;
     private static final int COST = 2;
     public BladeHurricane() {
