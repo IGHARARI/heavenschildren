@@ -200,5 +200,9 @@
   "${ModID}:PurgeBody": {
     "NAME": "Purge Body",
     "DESCRIPTION": "Remove ALL of your debuffs. NL Gain !B! Block. NL Next turn, discard !M! card. NL Exhaust."
+  },
+  "${ModID}:TemperedBody": {
+    "NAME": "Tempered Body",
+    "DESCRIPTION": "Gain !B! Block."
   }
 }
