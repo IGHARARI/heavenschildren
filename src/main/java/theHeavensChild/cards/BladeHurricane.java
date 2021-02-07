@@ -12,7 +12,7 @@ import theHeavensChild.powers.FrenzyPower;
 import static theHeavensChild.HeavensChildMod.makeID;
 
 public class BladeHurricane extends AbstractEasyCard {
-    public final static String ID = makeID(Frenzy.class.getSimpleName());
+    public final static String ID = makeID(BladeHurricane.class.getSimpleName());
 
     private final int DAMAGE = 7;
     private final int UPG_DAMAGE = 2;
