@@ -31,7 +31,7 @@ public class IgniteSpirit extends AbstractEasyCard {
                 cardStrings.EXTENDED_DESCRIPTION[0],
                 cardsPicked -> {
                     for (AbstractCard c : cardsPicked) {
-                        int strGain = c.cost;
+                        int strGain = Wiz.getCardEffectiveCost(c);
                         if (upgraded) strGain += 1;
                         if (strGain > 0) {
                             Wiz.applyToSelfTop(new StrengthPower(p, strGain));

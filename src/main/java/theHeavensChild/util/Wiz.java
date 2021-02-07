@@ -190,4 +190,11 @@ public class Wiz {
     public static void applyToEnemyNextTurn(AbstractPower power, AbstractMonster m) {
         addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new NextTurnPowerPower(m, power)));
     }
+
+    public static int getCardEffectiveCost(AbstractCard card) {
+        int cost = card.costForTurn;
+        if (card.cost == -1) cost = card.energyOnUse;
+        if (card.freeToPlayOnce || card.isInAutoplay) cost = 0;
+        return cost;
+    }
 }
