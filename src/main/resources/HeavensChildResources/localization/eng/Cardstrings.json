@@ -163,5 +163,9 @@
   "${ModID}:Frenzy": {
     "NAME": "Frenzy",
     "DESCRIPTION": "Deal !D! damage twice. NL Add a copy of this card to your hand next turn."
+  },
+  "${ModID}:ReachBeyond": {
+    "NAME": "Reach Beyond",
+    "DESCRIPTION": "Whenever a card is Exhausted, gain [E] next turn."
   }
 }

@@ -27,5 +27,10 @@
   "${ModID}:FrenzyPower": {
     "NAME": "Frenzy",
     "DESCRIPTIONS": ["Next turn, add #b%1$s #yFrenzy to your hand."]
+  },
+
+  "${ModID}:ReachBeyondPower": {
+    "NAME": "Reach Beyond",
+    "DESCRIPTIONS": ["Whenever a card is #yExhausted, gain #b%1$s [E] next turn."]
   }
 }
