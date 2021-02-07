@@ -22,7 +22,7 @@ public class PerfectGuard extends AbstractEasyCard {
     private static final int UPG_COST = 1;
 
     public PerfectGuard() {
-        super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         block = baseBlock = BASE_BLOCK;
         magicNumber = baseMagicNumber = BASE_ADDITIONAL_BLOCK;
     }
