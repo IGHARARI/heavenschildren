@@ -22,5 +22,10 @@
       "Next turn, gain #b%1$s Block.",
       "For the next #b%1$s turns, gain #b%2$s Block."
     ]
+  },
+
+  "${ModID}:FrenzyPower": {
+    "NAME": "Frenzy",
+    "DESCRIPTIONS": ["Next turn, add #b%1$s #yFrenzy to your hand."]
   }
 }

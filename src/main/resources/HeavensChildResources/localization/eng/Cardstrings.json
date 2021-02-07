@@ -159,5 +159,9 @@
   "${ModID}:Fortify": {
     "NAME": "Fortify",
     "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block at the start of your next X turns. NL heavenschild:Master: Have a Debuff."
+  },
+  "${ModID}:Frenzy": {
+    "NAME": "Frenzy",
+    "DESCRIPTION": "Deal !D! damage twice. NL Add a copy of this card to your hand next turn."
   }
 }
