@@ -167,5 +167,9 @@
   "${ModID}:ReachBeyond": {
     "NAME": "Reach Beyond",
     "DESCRIPTION": "Whenever a card is Exhausted, gain [E] next turn."
+  },
+  "${ModID}:InfernoTempest": {
+    "NAME": "Inferno Tempest",
+    "DESCRIPTION": "Gain !M! Strength. NL When Exhausted, deal !D! damage to a random enemy for each card in your Exhaust pile."
   }
 }
