@@ -12,10 +12,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -25,6 +22,7 @@ import theHeavensChild.cards.cardvars.M2Variable;
 import theHeavensChild.relics.AbstractEasyRelic;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -142,19 +140,15 @@ public class HeavensChildMod implements
         BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() + "Resources/localization/eng/Charstrings.json");
 
         BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + "Resources/localization/eng/Powerstrings.json");
+
     }
 
     @Override
     public void receiveEditKeywords() {
         Gson gson = new Gson();
         String json = Gdx.files.internal(getModID() + "Resources/localization/eng/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
-
-        if (keywords != null) {
-            for (Keyword keyword : keywords) {
-                BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-            }
-        }
+        Keyword[] keywords = gson.fromJson(json, Keyword[].class);
+        if (keywords != null) { for (Keyword keyword : keywords) { BaseMod.addKeyword(modID.toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION); } }
     }
 
     @Override
