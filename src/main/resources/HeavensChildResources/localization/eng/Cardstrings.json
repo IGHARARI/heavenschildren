@@ -196,5 +196,9 @@
   "${ModID}:BodyOfMind": {
     "NAME": "Body Of Mind",
     "DESCRIPTION": "Gain !B! Block. Gains 1 additional Block for each card in your Exhaust pile."
+  },
+  "${ModID}:PurgeBody": {
+    "NAME": "Purge Body",
+    "DESCRIPTION": "Remove ALL of your debuffs. NL Gain !B! Block. NL Next turn, discard !M! card. NL Exhaust."
   }
 }
