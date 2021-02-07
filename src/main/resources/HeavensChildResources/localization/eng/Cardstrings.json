@@ -192,5 +192,9 @@
   "${ModID}:Replicate": {
     "NAME": "Replicate",
     "DESCRIPTION": "This turn, the next Skill you play is played again next turn."
+  },
+  "${ModID}:BodyOfMind": {
+    "NAME": "Body Of Mind",
+    "DESCRIPTION": "Gain !B! Block. Gains 1 additional Block for each card in your Exhaust pile."
   }
 }
