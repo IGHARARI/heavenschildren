@@ -10,11 +10,13 @@ import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theHeavensChild.cards.AbstractEasyCard;
 import theHeavensChild.cards.cardvars.SecondDamage;
@@ -35,7 +37,9 @@ public class HeavensChildMod implements
         OnStartBattleSubscriber,
         PreMonsterTurnSubscriber,
         PostEnergyRechargeSubscriber,
-        EditCharactersSubscriber {
+        EditCharactersSubscriber,
+        OnCardUseSubscriber
+{
 
     private static final String modID = "HeavensChild";
     public static String getModID() {
@@ -73,6 +77,7 @@ public class HeavensChildMod implements
 
     public static boolean receivedAttackDamageLastTurn = false;
     public static boolean resettedAttackDamage = true;
+    public static int energySpentThisCombat = 0;
 
     public static String makePath(String resourcePath) {
         return modID + "Resources/" + resourcePath;
@@ -162,9 +167,15 @@ public class HeavensChildMod implements
     }
 
     @Override
+    public void receiveCardUsed(AbstractCard c){
+        if(c.cost >= 0){ energySpentThisCombat += c.cost; }
+        else if(c.cost == -1){ energySpentThisCombat += EnergyPanel.totalCount; }
+    }
+    @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         resettedAttackDamage = true;
         receivedAttackDamageLastTurn = false;
+        energySpentThisCombat = 0;
     }
 
     @Override
