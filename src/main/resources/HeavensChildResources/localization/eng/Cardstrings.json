@@ -112,7 +112,7 @@
   },
   "${ModID}:GracefulLanding": {
     "NAME": "Graceful Landing",
-    "DESCRIPTION": "Gain !B! Block. NL Master: Receive no attack damage last turn."
+    "DESCRIPTION": "Gain !B! Block. NL heavenschild:Master: Receive no attack damage last turn."
   },
   "${ModID}:TacticalToxin": {
     "NAME": "Tactical Toxin",
