@@ -155,5 +155,9 @@
   "${ModID}:QuickStep": {
     "NAME": "Quick Step",
     "DESCRIPTION": "Draw !M! cards. NL For each *Skill drawn this way, gain !${ModID}:M2! Dexterity. NL Exhaust"
+  },
+  "${ModID}:Fortify": {
+    "NAME": "Fortify",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block at the start of your next X turns. NL heavenschild:Master: Have a Debuff."
   }
 }

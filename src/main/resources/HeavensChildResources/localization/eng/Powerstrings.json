@@ -14,5 +14,13 @@
   "${ModID}:NextTurnDiscard": {
     "NAME": "Discard",
     "DESCRIPTIONS": ["Discard #b", " card", " cards", " next turn."]
+  },
+
+  "${ModID}:FortifyPower": {
+    "NAME": "Fortify",
+    "DESCRIPTIONS": [
+      "Next turn, gain #b%1$s Block.",
+      "For the next #b%1$s turns, gain #b%2$s Block."
+    ]
   }
 }
