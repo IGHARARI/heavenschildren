@@ -158,7 +158,7 @@
   },
   "${ModID}:Fortify": {
     "NAME": "Fortify",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block at the start of your next X turns. NL heavenschild:Master: Have a Debuff."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block at the start of your next X turns. NL heavenschild:Master: Have a Debuff. NL Exhaust."
   },
   "${ModID}:Frenzy": {
     "NAME": "Frenzy",
@@ -179,5 +179,9 @@
   "${ModID}:ForceOfNature": {
     "NAME": "Flawless Slice",
     "DESCRIPTION": "At the end of your turn, deal damage to a random enemy equal to half of your Block."
+  },
+  "${ModID}:BladeHurricane": {
+    "NAME": "BladeHurricane",
+    "DESCRIPTION": "Draw !M! cards. NL Discard any number of cards. NL For each card discarded, deal !D! damage to a random enemy. NL Exhaust."
   }
 }
