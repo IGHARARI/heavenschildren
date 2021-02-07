@@ -38,7 +38,8 @@ public class HeavensChildMod implements
         PreMonsterTurnSubscriber,
         PostEnergyRechargeSubscriber,
         EditCharactersSubscriber,
-        OnCardUseSubscriber
+        OnCardUseSubscriber,
+        OnPlayerLoseBlockSubscriber
 {
 
     private static final String modID = "HeavensChild";
@@ -171,6 +172,14 @@ public class HeavensChildMod implements
         if(c.cost >= 0){ energySpentThisCombat += c.cost; }
         else if(c.cost == -1){ energySpentThisCombat += EnergyPanel.totalCount; }
     }
+
+    @Override public int receiveOnPlayerLoseBlock(int var){
+        // logic for Vigilance.
+        System.out.println("debug logging take 1.");
+        return var;
+    }
+
+
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         resettedAttackDamage = true;
