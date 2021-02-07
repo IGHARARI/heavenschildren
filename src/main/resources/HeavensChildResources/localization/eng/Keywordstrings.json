@@ -1,10 +1,9 @@
 [
   {
-    "PROPER_NAME": "TODO",
+    "PROPER_NAME": "Master",
     "NAMES": [
-      "todo",
-      "todos"
+      "master"
     ],
-    "DESCRIPTION": "TODO: Make your own epic keywords"
+    "DESCRIPTION": "Meeting the Master condition of a card will refund its cost when played."
   }
 ]
