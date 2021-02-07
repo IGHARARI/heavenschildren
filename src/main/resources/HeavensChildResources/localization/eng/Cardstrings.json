@@ -171,5 +171,9 @@
   "${ModID}:InfernoTempest": {
     "NAME": "Inferno Tempest",
     "DESCRIPTION": "Gain !M! Strength. NL When Exhausted, deal !D! damage to a random enemy for each card in your Exhaust pile."
+  },
+  "${ModID}:FlawlessSlice": {
+    "NAME": "Flawless Slice",
+    "DESCRIPTION": "Deal !D! damage. NL Unplayable if you have ANY debuffs."
   }
 }
