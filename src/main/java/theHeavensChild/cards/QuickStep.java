@@ -20,6 +20,7 @@ public class QuickStep extends AbstractEasyCard {
         super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = DRAW;
         m2 = baseM2 = DEX;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) { addToBot(new DrawCardAction(magicNumber, new QuickStepAction(m2))); }
