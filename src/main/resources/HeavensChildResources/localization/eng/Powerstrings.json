@@ -14,5 +14,36 @@
   "${ModID}:NextTurnDiscard": {
     "NAME": "Discard",
     "DESCRIPTIONS": ["Discard #b", " card", " cards", " next turn."]
+  },
+
+  "${ModID}:FortifyPower": {
+    "NAME": "Fortify",
+    "DESCRIPTIONS": [
+      "Next turn, gain #b%1$s Block.",
+      "For the next #b%1$s turns, gain #b%2$s Block."
+    ]
+  },
+
+  "${ModID}:FrenzyPower": {
+    "NAME": "Frenzy",
+    "DESCRIPTIONS": ["Next turn, add #b%1$s #yFrenzy to your hand."]
+  },
+
+  "${ModID}:ReachBeyondPower": {
+    "NAME": "Reach Beyond",
+    "DESCRIPTIONS": ["Whenever a card is #yExhausted, gain #b%1$s [E] next turn."]
+  },
+
+  "${ModID}:ForceOfNaturePower": {
+    "NAME": "Force of Nature",
+    "DESCRIPTIONS": ["At the end of your turn, deal damage to a random enemy equal to half of your Block."]
+  },
+
+  "${ModID}:ReplicatePower": {
+    "NAME": "Replicate",
+    "DESCRIPTIONS": [
+      "This turn, the next Skill you play is played next turn",
+      "At the start of next turn, play #b%1$s."
+    ]
   }
 }

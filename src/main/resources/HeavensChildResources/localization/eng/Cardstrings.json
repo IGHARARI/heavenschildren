@@ -112,7 +112,7 @@
   },
   "${ModID}:GracefulLanding": {
     "NAME": "Graceful Landing",
-    "DESCRIPTION": "Gain !B! Block. NL Master: Receive no attack damage last turn."
+    "DESCRIPTION": "Gain !B! Block. NL heavenschild:Master: Receive no attack damage last turn."
   },
   "${ModID}:TacticalToxin": {
     "NAME": "Tactical Toxin",
@@ -151,5 +151,62 @@
   "${ModID}:PerfectGuard": {
     "NAME": "Perfect Guard",
     "DESCRIPTION": "Gain !B! Block. Gains 1 additional Block for ALL your Skills."
+  },
+  "${ModID}:QuickStep": {
+    "NAME": "Quick Step",
+    "DESCRIPTION": "Draw !M! cards. NL For each *Skill drawn this way, gain !${ModID}:M2! Dexterity. NL Exhaust"
+  },
+  "${ModID}:Fortify": {
+    "NAME": "Fortify",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block at the start of your next X turns. NL heavenschild:Master: Have a Debuff. NL Exhaust."
+  },
+  "${ModID}:Frenzy": {
+    "NAME": "Frenzy",
+    "DESCRIPTION": "Deal !D! damage twice. NL Add a copy of this card to your hand next turn."
+  },
+  "${ModID}:ReachBeyond": {
+    "NAME": "Reach Beyond",
+    "DESCRIPTION": "Whenever a card is Exhausted, gain [E] next turn."
+  },
+  "${ModID}:InfernoTempest": {
+    "NAME": "Inferno Tempest",
+    "DESCRIPTION": "Gain !M! Strength. NL When Exhausted, deal !D! damage to a random enemy for each card in your Exhaust pile."
+  },
+  "${ModID}:FlawlessSlice": {
+    "NAME": "Flawless Slice",
+    "DESCRIPTION": "Deal !D! damage. NL Unplayable if you have ANY debuffs."
+  },
+  "${ModID}:ForceOfNature": {
+    "NAME": "Flawless Slice",
+    "DESCRIPTION": "At the end of your turn, deal damage to a random enemy equal to half of your Block."
+  },
+  "${ModID}:BladeHurricane": {
+    "NAME": "BladeHurricane",
+    "DESCRIPTION": "Draw !M! cards. NL Discard any number of cards. NL For each card discarded, deal !D! damage to a random enemy. NL Exhaust."
+  },
+  "${ModID}:Sprint": {
+    "NAME": "Sprint",
+    "DESCRIPTION": "Draw !M! card. NL Gain [E] for each card in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain [E] for each card in your hand. NL Exhaust."
+  },
+  "${ModID}:Replicate": {
+    "NAME": "Replicate",
+    "DESCRIPTION": "This turn, the next Skill you play is played again next turn."
+  },
+  "${ModID}:BodyOfMind": {
+    "NAME": "Body Of Mind",
+    "DESCRIPTION": "Gain !B! Block. Gains 1 additional Block for each card in your Exhaust pile."
+  },
+  "${ModID}:PurgeBody": {
+    "NAME": "Purge Body",
+    "DESCRIPTION": "Remove ALL of your debuffs. NL Gain !B! Block. NL Next turn, discard !M! card. NL Exhaust."
+  },
+  "${ModID}:TemperedBody": {
+    "NAME": "Tempered Body",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "${ModID}:FollowUpSwing": {
+    "NAME": "Follow-Up Swing",
+    "DESCRIPTION": "Deal !D! Damage. NL heavenschild:Master: NL Play an skill this turn."
   }
 }

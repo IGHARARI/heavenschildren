@@ -10,14 +10,13 @@ import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theHeavensChild.cards.AbstractEasyCard;
 import theHeavensChild.cards.cardvars.SecondDamage;
@@ -25,6 +24,7 @@ import theHeavensChild.cards.cardvars.M2Variable;
 import theHeavensChild.relics.AbstractEasyRelic;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -37,7 +37,10 @@ public class HeavensChildMod implements
         OnStartBattleSubscriber,
         PreMonsterTurnSubscriber,
         PostEnergyRechargeSubscriber,
-        EditCharactersSubscriber {
+        EditCharactersSubscriber,
+        OnCardUseSubscriber,
+        OnPlayerLoseBlockSubscriber
+{
 
     private static final String modID = "HeavensChild";
     public static String getModID() {
@@ -75,6 +78,7 @@ public class HeavensChildMod implements
 
     public static boolean receivedAttackDamageLastTurn = false;
     public static boolean resettedAttackDamage = true;
+    public static int energySpentThisCombat = 0;
 
     public static String makePath(String resourcePath) {
         return modID + "Resources/" + resourcePath;
@@ -142,19 +146,15 @@ public class HeavensChildMod implements
         BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() + "Resources/localization/eng/Charstrings.json");
 
         BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + "Resources/localization/eng/Powerstrings.json");
+
     }
 
     @Override
     public void receiveEditKeywords() {
         Gson gson = new Gson();
         String json = Gdx.files.internal(getModID() + "Resources/localization/eng/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
-
-        if (keywords != null) {
-            for (Keyword keyword : keywords) {
-                BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-            }
-        }
+        Keyword[] keywords = gson.fromJson(json, Keyword[].class);
+        if (keywords != null) { for (Keyword keyword : keywords) { BaseMod.addKeyword(modID.toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION); } }
     }
 
     @Override
@@ -168,9 +168,23 @@ public class HeavensChildMod implements
     }
 
     @Override
+    public void receiveCardUsed(AbstractCard c){
+        if(c.cost >= 0){ energySpentThisCombat += c.cost; }
+        else if(c.cost == -1){ energySpentThisCombat += EnergyPanel.totalCount; }
+    }
+
+    @Override public int receiveOnPlayerLoseBlock(int var){
+        // logic for Vigilance.
+        System.out.println("debug logging take 1.");
+        return var;
+    }
+
+
+    @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         resettedAttackDamage = true;
         receivedAttackDamageLastTurn = false;
+        energySpentThisCombat = 0;
     }
 
     @Override

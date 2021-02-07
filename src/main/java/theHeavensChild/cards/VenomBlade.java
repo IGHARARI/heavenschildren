@@ -19,7 +19,7 @@ public class VenomBlade extends AbstractEasyCard {
 
 
     public VenomBlade() {
-        super(ID, BASE_COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, BASE_COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = damage = BASE_DMG;
     }
 
