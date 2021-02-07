@@ -175,5 +175,9 @@
   "${ModID}:FlawlessSlice": {
     "NAME": "Flawless Slice",
     "DESCRIPTION": "Deal !D! damage. NL Unplayable if you have ANY debuffs."
+  },
+  "${ModID}:ForceOfNature": {
+    "NAME": "Flawless Slice",
+    "DESCRIPTION": "At the end of your turn, deal damage to a random enemy equal to half of your Block."
   }
 }

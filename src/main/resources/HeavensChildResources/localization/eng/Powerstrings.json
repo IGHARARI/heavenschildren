@@ -32,5 +32,10 @@
   "${ModID}:ReachBeyondPower": {
     "NAME": "Reach Beyond",
     "DESCRIPTIONS": ["Whenever a card is #yExhausted, gain #b%1$s [E] next turn."]
+  },
+
+  "${ModID}:ForceOfNaturePower": {
+    "NAME": "Force of Nature",
+    "DESCRIPTIONS": ["At the end of your turn, deal damage to a random enemy equal to half of your Block."]
   }
 }
