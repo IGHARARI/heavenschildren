@@ -147,5 +147,9 @@
     "DESCRIPTION": "Exhaust a card in your discard pile. NL Gain Strength equal to its cost.",
     "UPGRADE_DESCRIPTION": "Exhaust a card in your discard pile. NL Gain Strength equal to its cost +1.",
     "EXTENDED_DESCRIPTION": ["Select a card to Exhaust."]
+  },
+  "${ModID}:PerfectGuard": {
+    "NAME": "Perfect Guard",
+    "DESCRIPTION": "Gain !B! Block. Gains 1 additional Block for ALL your Skills."
   }
 }
