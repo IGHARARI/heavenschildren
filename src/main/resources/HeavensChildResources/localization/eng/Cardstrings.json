@@ -188,5 +188,9 @@
     "NAME": "Sprint",
     "DESCRIPTION": "Draw !M! card. NL Gain [E] for each card in your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain [E] for each card in your hand. NL Exhaust."
+  },
+  "${ModID}:Replicate": {
+    "NAME": "Replicate",
+    "DESCRIPTION": "This turn, the next Skill you play is played again next turn."
   }
 }

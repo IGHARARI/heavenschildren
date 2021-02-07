@@ -37,5 +37,13 @@
   "${ModID}:ForceOfNaturePower": {
     "NAME": "Force of Nature",
     "DESCRIPTIONS": ["At the end of your turn, deal damage to a random enemy equal to half of your Block."]
+  },
+
+  "${ModID}:ReplicatePower": {
+    "NAME": "Replicate",
+    "DESCRIPTIONS": [
+      "This turn, the next Skill you play is played next turn",
+      "At the start of next turn, play #b%1$s."
+    ]
   }
 }
